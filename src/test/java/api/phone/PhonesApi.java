@@ -36,7 +36,7 @@ public class PhonesApi extends ApiBase {
         return endPoint;
     }
 
-    public void deleteExistingPhone(Integer code, int phoneId) {
+    public void deleteExistingPhone(Integer code, Integer phoneId) { //int
         String endPoint = "/api/phone/{id}";    // phoneId
         deleteRequest(endPoint, code, phoneId);
     }
@@ -47,7 +47,7 @@ public class PhonesApi extends ApiBase {
         return response;
     }
 
-    public Response getPhone(Integer code, int phoneId) {
+    public Response getPhone(Integer code, Integer phoneId) { //int
         String endPoint = "/api/phone/{id}";
         response = getRequestWithParam(endPoint, code, phoneId); // "id",
         return response;
